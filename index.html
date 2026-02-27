@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnTv | Conectando historias, ciudades y sueños</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+
+    <header class="hero-carousel">
+        <div class="hero-static-overlay">
+            <div class="hero-title-group">
+                <img src="recursos/ontv.png" alt="OnTv Logo" class="hero-logo">
+                <div class="hero-separator">|</div>
+                <h1>Programación</h1>
+            </div>
+            <button class="btn show-programming btn-hero">Ver Programación</button>
+        </div>
+
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <img src="recursos/InicioR/Port.png" alt="OnTv Portada" class="carousel-bg-img">
+                <div class="carousel-bg bg-port"></div>
+                <div class="hero-bottom-label">
+                    <span class="label-tag">Programación</span>
+                    <p>OnTv: Conectando tus historias. 📺</p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <img src="recursos/InicioR/Port1.png" alt="OnTv Portada Alternativa" class="carousel-bg-img">
+                <div class="carousel-bg bg-port1"></div>
+                <div class="hero-bottom-label">
+                    <span class="label-tag">¡No te lo pierdas!</span>
+                    <p>¡Tus programas favoritos están aquí! 📺 Disfruta.</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+        </div>
+    </header>
+
+    <!-- Programming Modal -->
+    <div id="programming-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" src="recursos/InicioR/PROGRAMACION.png" alt="Programación OnTv">
+    </div>
+
+    <section id="programacion" class="schedule">
+
+        <div class="program-grid">
+            <div class="program-card program-card-emprendedores glass">
+                <div class="program-img-placeholder bg-orange-program">
+                    <img src="recursos/InicioR/Emprendedores.png" alt="Emprendedores">
+                </div>
+                <div class="program-info">
+                    <h3>Emprendedores en Acción</h3>
+                    <p class="program-tag">💼✨ Historias que inspiran</p>
+                    <p>Únete a Alexandra Torres para conocer a los protagonistas del cambio: los emprendedores que están
+                        rompiendo esquemas y dejando huella en su comunidad.</p>
+                    <div class="video-gallery">
+                        <p><strong><i class="fa-brands fa-youtube"></i> Contenido Destacado:</strong></p>
+                        <div class="video-grid">
+                            <div class="video-item">
+                                <iframe
+                                    src="https://www.youtube-nocookie.com/embed/WUWDE0VF26I?autoplay=1&mute=1&playlist=WUWDE0VF26I&loop=1"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="video-item">
+                                <iframe
+                                    src="https://www.youtube-nocookie.com/embed/i2yf4RQOZmo?autoplay=1&mute=1&playlist=i2yf4RQOZmo&loop=1"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="video-item">
+                                <iframe
+                                    src="https://www.youtube-nocookie.com/embed/BSrREXqXcv8?autoplay=1&mute=1&playlist=BSrREXqXcv8&loop=1"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="program-card program-card-salud glass">
+                <div class="program-img-placeholder bg-celeste-program">
+                    <img src="recursos/InicioR/Saludaldia.png" alt="Salud">
+                </div>
+                <div class="program-info">
+                    <h3>Salud al Día</h3>
+                    <p class="program-tag">🩺 Prevención y bienestar</p>
+                    <p>Acompaña a Rocío Casas y a los especialistas que te orientan con consejos prácticos para cuidar
+                        tu salud física y emocional.</p>
+                    <div class="video-gallery">
+                        <p><strong><i class="fa-brands fa-youtube"></i> Contenido Destacado:</strong></p>
+                        <div class="video-grid">
+                            <div class="video-item">
+                                <iframe
+                                    src="https://www.youtube-nocookie.com/embed/5X8e822c1B4?autoplay=1&mute=1&playlist=5X8e822c1B4&loop=1"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="video-item">
+                                <iframe
+                                    src="https://www.youtube-nocookie.com/embed/yZUK1RHu5QE?autoplay=1&mute=1&playlist=yZUK1RHu5QE&loop=1"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="video-item">
+                                <iframe
+                                    src="https://www.youtube-nocookie.com/embed/mzeQWXzTFrA?autoplay=1&mute=1&playlist=mzeQWXzTFrA&loop=1"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
