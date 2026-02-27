@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             document.getElementById('navbar-container').innerHTML = data;
             initNavbar();
+            initProgrammingModal(); // Initialize modal after injection
         });
 
     // Inject Footer
@@ -25,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setupFooterObserver();
         });
 
-    initProgrammingModal();
+
     initScrollReveal();
     injectFloatingControls();
     // Use a small timeout to ensure DOM is fully ready and styles are applied
@@ -130,6 +131,16 @@ function initNavbar() {
     if (burger) {
         burger.addEventListener('click', () => {
             navLinks.classList.toggle('nav-active');
+
+            // Animate Links
+            document.querySelectorAll('.nav-links li').forEach((link, index) => {
+                if (link.style.animation) {
+                    link.style.animation = '';
+                } else {
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                }
+            });
+
             burger.classList.toggle('toggle');
         });
     }
