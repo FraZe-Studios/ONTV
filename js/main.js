@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     */
 
     // Inject Navbar
-    fetch('navbar.html')
+    const version = new Date().getTime();
+    fetch(`navbar.html?v=${version}`)
         .then(response => response.text())
         .then(data => {
             document.getElementById('navbar-container').innerHTML = data;
@@ -18,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
     // Inject Footer
-    fetch('footer.html')
+    fetch(`footer.html?v=${version}`)
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-container').innerHTML = data;
