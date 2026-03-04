@@ -5,8 +5,8 @@
     --primary-light: #1565c0;
     --primary-dark: #002171;
     --accent-color: #00e5ff;
-    --text-primary: #1a1a1a;
-    --text-secondary: #4a4a4a;
+    --text-primary: #000000;
+    --text-secondary: #000000;
     --bg-dark: #ffffff;
     --bg-glass: rgba(255, 255, 255, 0.75);
     /* More transparent for better glass effect */
@@ -641,7 +641,7 @@ ul {
 
 .program-info h3 {
     font-size: 2.5rem;
-    color: var(--accent-color);
+    color: #0d47a1;
     margin-bottom: 0.5rem;
 }
 
@@ -788,7 +788,7 @@ ul {
 .manifesto-card h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: var(--accent-color);
+    color: #0d47a1;
 }
 
 .lead {
@@ -801,6 +801,7 @@ ul {
 .manifesto-body h3 {
     margin-bottom: 1rem;
     font-size: 1.4rem;
+    color: #0d47a1;
 }
 
 .manifesto-body p {
@@ -826,18 +827,14 @@ ul {
 .section-title h2 {
     font-size: 4rem;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, #00e5ff 0%, #ffffff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+    color: #0d47a1;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
 .section-title p {
-    color: #ddd;
+    color: #000000;
     margin-bottom: 3rem;
     font-size: 1.5rem;
     font-weight: 400;
@@ -920,13 +917,13 @@ ul {
 
 .manifesto-info h2 {
     font-size: 2.5rem;
-    color: var(--accent-color);
+    color: #0d47a1;
     margin-bottom: 1rem;
 }
 
 .highlight-text {
     margin-top: 2rem;
-    color: var(--accent-color);
+    color: #0d47a1;
     font-weight: 800;
 }
 
@@ -1028,6 +1025,10 @@ ul {
 
 .service-item:nth-child(even) .service-info-overlay {
     background: none;
+}
+
+.program-card-salud h3 {
+    color: #00e5ff !important;
 }
 
 .service-info-overlay h3 {
