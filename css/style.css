@@ -710,6 +710,13 @@ ul {
     background-repeat: no-repeat;
 }
 
+.header-contact {
+    background-image: linear-gradient(rgba(1, 14, 30, 0.4), rgba(1, 14, 30, 0.4)), url('../recursos/contacto.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .body-scrolled .page-header {
     height: 25vh;
     opacity: 0.8;
@@ -1073,9 +1080,13 @@ ul {
     padding: 3rem 5%;
     max-width: 1200px;
     margin: 4rem auto;
-    /* Changed from negative margin to create distance */
     position: relative;
     z-index: 10;
+    background: url('../recursos/fond.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
 }
 
 .hero-logo-round-blue {
@@ -1105,7 +1116,7 @@ ul {
 
 .contact-info {
     padding: 3rem;
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    background: linear-gradient(135deg, rgba(0, 33, 113, 0.85), rgba(13, 71, 161, 0.85));
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     color: white;
@@ -1116,6 +1127,31 @@ ul {
     margin-bottom: 2rem;
     text-align: center;
     color: white;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    color: white;
+    flex: 1;
+    min-width: 200px;
+}
+
+.btn-whatsapp:hover {
+    background: #1da851;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+.btn-email {
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    color: white;
+    flex: 1;
+    min-width: 200px;
 }
 
 .info-item {

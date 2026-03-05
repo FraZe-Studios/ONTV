@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="css/style.css?v=1.1">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="Ontv.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="Ontv.ico">
 </head>
 
 <body class="contact-page">
     <div id="navbar-container"></div>
 
-    <header class="page-header">
+    <header class="page-header header-contact">
         <div class="header-content animate-fade">
             <div class="hero-title-group">
                 <img src="recursos/ontv.png" alt="OnTv Logo" class="hero-logo-round-blue">
@@ -43,26 +45,29 @@
             </div>
 
             <div class="contact-form-container animate-fade">
-                <form id="contact-form">
+                <form id="contact-form" onsubmit="return false;">
                     <div class="form-row-grid">
                         <div class="form-group">
                             <label>Nombres</label>
-                            <input type="text" placeholder="Tus nombres">
+                            <input type="text" id="contact-nombre" placeholder="Tus nombres" required>
                         </div>
                         <div class="form-group">
                             <label>Apellidos</label>
-                            <input type="text" placeholder="Tus apellidos">
+                            <input type="text" id="contact-apellido" placeholder="Tus apellidos" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email" placeholder="tu@email.com">
+                        <input type="email" id="contact-email" placeholder="tu@email.com" required>
                     </div>
                     <div class="form-group">
                         <label>Mensaje</label>
-                        <textarea rows="5" placeholder="¿En qué podemos ayudarte?"></textarea>
+                        <textarea rows="5" id="contact-mensaje" placeholder="¿En qué podemos ayudarte?"
+                            required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-full">Enviar Mensaje</button>
+                    <button type="button" class="btn btn-full btn-email" onclick="enviarCorreo()">
+                        <i class="fa-solid fa-envelope"></i> Enviar Mensaje
+                    </button>
                 </form>
             </div>
         </div>
@@ -71,6 +76,46 @@
     <div id="footer-container"></div>
 
     <script src="js/main.js"></script>
+    <script>
+        function obtenerDatos() {
+            const nombre = document.getElementById('contact-nombre').value.trim();
+            const apellido = document.getElementById('contact-apellido').value.trim();
+            const email = document.getElementById('contact-email').value.trim();
+            const mensaje = document.getElementById('contact-mensaje').value.trim();
+
+            if (!nombre || !apellido || !email || !mensaje) {
+                alert('Por favor, completa todos los campos.');
+                return null;
+            }
+            return { nombre, apellido, email, mensaje };
+        }
+
+        function enviarWhatsApp() {
+            const datos = obtenerDatos();
+            if (!datos) return;
+
+            const texto = `*Nuevo mensaje de contacto - OnTv*%0A%0A` +
+                `*Nombre:* ${datos.nombre} ${datos.apellido}%0A` +
+                `*Email:* ${datos.email}%0A` +
+                `*Mensaje:* ${datos.mensaje}`;
+
+            window.open(`https://wa.me/51922655566?text=${texto}`, '_blank');
+        }
+
+        function enviarCorreo() {
+            const datos = obtenerDatos();
+            if (!datos) return;
+
+            const asunto = encodeURIComponent(`Nuevo mensaje de contacto - ${datos.nombre} ${datos.apellido}`);
+            const cuerpo = encodeURIComponent(
+                `Nombre: ${datos.nombre} ${datos.apellido}\n` +
+                `Email: ${datos.email}\n\n` +
+                `Mensaje:\n${datos.mensaje}`
+            );
+
+            window.open(`mailto:imagen@fibertheandes.com?subject=${asunto}&body=${cuerpo}`, '_blank');
+        }
+    </script>
 
 </body>
 
